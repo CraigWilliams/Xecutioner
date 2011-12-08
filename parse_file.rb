@@ -5,26 +5,20 @@ if ARGV.size == 0
   exit!
 end
 
-file_path = ARGV[0]
-if file_path =~ /^~/
-  file_path = File.expand_path(file_path)
-end
-
-file = File.open(file_path, 'r')
-
-found_lines = []
-line_count = 1
+found_lines     = []
+line_count      = 1
+file_path       = ARGV[0]
+file_path       = File.expand_path(file_path) if file_path = ~ /^~/
+file            = File.open(file_path, 'r')
+formatted_lines = []
 
 while (line = file.gets)
   found_lines << "#{line.gsub(/('|"|do)/,'').strip}:#{line_count}" if line =~ /^\s+?(describe|context|scenario|it)/i
   line_count += 1
 end
 
-formatted_lines = []
 found_lines.each do |line|
-  if line =~ /^\s+?it/
-    line = "   #{line}"
-  end
+  line = "   #{line}" if line =~ /^\s+?it/
   formatted_lines << line
 end
 
