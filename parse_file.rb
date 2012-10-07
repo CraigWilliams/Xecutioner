@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-def pad_number(number)
+def pad(number)
   "%03d" % number
 end
 
@@ -17,7 +17,7 @@ file            = File.open(file_path, 'r')
 formatted_lines = []
 
 while (line = file.gets)
-  found_lines << "#{pad_number(line_count)}:#{line.gsub(/('|"|do)/,'').strip}" if line =~ /^\s+?(describe|context|scenario|it)/i
+  found_lines << "#{pad(line_count)}:#{line.gsub(/('|"|do)/,'').strip}" if line =~ /^\s+?(describe|context|scenario|it)/i
   line_count += 1
 end
 
@@ -27,4 +27,3 @@ found_lines.each do |line|
 end
 
 print formatted_lines.join("\n")
-
