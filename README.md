@@ -38,6 +38,17 @@ There are many shortcut managers but the one I currently use is [Spark](http://w
 Current setup - change the path to match where you put the files.
 ![Spark Setup](http://allancraig.net/personal/spark_setup.png "Spark Setup")
 
+## iTerm or Terminal
+
+The default setting is 'iTerm.'
+
+*To use Terminal*
+
+xecutioner.applescript
+```applescript
+  property EMULATOR : "Terminal"
+```
+
 ## RSpec
 
 RSpec files will list lines found that begin with the following:
