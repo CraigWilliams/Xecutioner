@@ -38,11 +38,28 @@ There are many shortcut managers but the one I currently use is [Spark](http://w
 Current setup - change the path to match where you put the files.
 ![Spark Setup](http://allancraig.net/personal/spark_setup.png "Spark Setup")
 
-# RSpec and Cucumber Files
-If the file is a Cucumber file, then all the Scenarios will be in the
-list of choices along with a default "Run'em All!" that will execute
-the entire file. RSpec files will have 'it', 'describe' & 'context.'
-Cucumber will list all 'Scenario' lines.
+## RSpec
+
+RSpec files will list lines found that begin with the following:
+
+* it
+* describe
+* context
+
+## Cucumber
+
+Cucumber files will list lines found that begin with the following:
+
+* Scenario
+
+## Choosing a Test
+
+After entering key command and activating the script, you are presented with a list of
+tests to choose from. Selecting one will run that specific test only. Choosing "Run'em All!"
+will run the entire file.
+
+Each successive execution will highlight the previously selected test for you making it a faster
+process to run the test again. This is only saved for the current file.
 
 ![Choosing Available Tests](http://allancraig.net/personal/choose_from_tests.png)
 
