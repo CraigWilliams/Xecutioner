@@ -20,7 +20,7 @@ it *should* be automated.
 
 ## Why Not Just Use Autotest
 
-Good question. In a lot of cases, it is the best option.
+Good question. In many cases, it is the best option.
 
 I am a big fan of running tests using Autotest, Guard, etc. but many times this is not the best solution for
 the current application that is being built. A legacy system that has extremely slow tests is a good example
