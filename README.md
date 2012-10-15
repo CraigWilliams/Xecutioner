@@ -14,7 +14,7 @@ While TDD'ing Rails apps, I find myself doing the same few actions over and over
 * Arrow up to the previous command and run it
 * Rinse and repeat until test and code are working and refactored
 
-This is a serious pain point for me and what I consider a "Process Smell" because it ripe for
+This is a serious pain point for me and what I consider a "Process Smell" because it's ripe for
 automation. Anytime there is a consistent set of tasks or actions that get repeated over and over like this,
 it *should* be automated.
 
